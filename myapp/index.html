@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бросить курить - Трекер</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚭 Бросить курить</h1>
+            <p class="subtitle">Трекер вашего прогресса</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="setup">Настройка</button>
+            <button class="tab-button" data-tab="calendar">Календарь</button>
+            <button class="tab-button" data-tab="stats">Статистика</button>
+        </div>
+
+        <!-- Вкладка настройки -->
+        <div class="tab-content active" id="setup">
+            <div class="card">
+                <h2>Начните свой путь</h2>
+                <div class="form-group">
+                    <label for="cigarettesPerDay">Сколько сигарет в день вы курили?</label>
+                    <input type="number" id="cigarettesPerDay" min="1" placeholder="Например: 20">
+                </div>
+                <div class="form-group">
+                    <label for="packPrice">Сколько стоит одна пачка? (₽)</label>
+                    <input type="number" id="packPrice" min="1" placeholder="Например: 300">
+                </div>
+                <div class="form-group">
+                    <label for="cigarettesPerPack">Сколько сигарет в пачке?</label>
+                    <input type="number" id="cigarettesPerPack" min="1" value="20" placeholder="20">
+                </div>
+                <button class="btn-primary" id="startBtn">Начать</button>
+            </div>
+        </div>
+
+        <!-- Вкладка календаря -->
+        <div class="tab-content" id="calendar">
+            <div class="card">
+                <h2>Календарь</h2>
+                <p class="info-text">Отмечайте дни, когда вы не курили</p>
+                <div id="calendarContainer"></div>
+            </div>
+        </div>
+
+        <!-- Вкладка статистики -->
+        <div class="tab-content" id="stats">
+            <div class="card">
+                <h2>Ваш прогресс</h2>
+                <div id="statsContent">
+                    <p class="info-text">Сначала настройте параметры на вкладке "Настройка"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
